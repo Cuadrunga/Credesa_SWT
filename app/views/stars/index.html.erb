@@ -1,0 +1,16 @@
+<h1>Mejores Proyectos #StartupWeekendTacna</h1>
+
+
+    <% @stars.each do |star| %>
+      <div class="row">
+        <%= image_tag("super-star.png", size:"128x128") %>
+        <%= star.name %>
+        <%= link_to 'Show', star %>
+       <%= link_to 'Edit', edit_star_path(star) %>
+        <%= link_to 'Destroy', star, method: :delete, data: { confirm: 'No me borres =(' } %>
+      </div>
+    <% end %>
+
+<br>
+
+<%= link_to 'New Star', new_star_path %>
